@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2,
+h3 {
+  color: #3f6699;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  background-color: #207561;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+nav a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.profile header {
+  text-align: center;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#content {
+  flex: 5;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+
+aside {
+  width: 25%;
+  padding: 20px;
+}
+
+footer {
+  background-color: #207561;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain; /* Menampilkan seluruh gambar tanpa memotong */
+  object-position: center;
+  image-rendering: auto; /* Biarkan browser memilih metode rendering terbaik */
+}
+
+.profile img {
+  width: 200px;
+}
+
+.card {
+  display: block; /* atau 'flex' tergantung pada layout yang Anda inginkan */
+  width: 100%; /* Sesuaikan lebar sesuai kebutuhan */
+  height: auto; /* Memastikan tinggi menyesuaikan dengan konten */
+  margin-bottom: 20px; /* Memberi jarak antar kartu */
+  padding: 20px; /* Padding untuk estetika */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: menambahkan shadow untuk estetika */
+  background-color: #fff; /* Warna latar belakang kartu */
+}
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: auto;
+  -webkit-box-orient: vertical;
+}
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  main aside {
+    align-self: stretch;
+  }
+}
